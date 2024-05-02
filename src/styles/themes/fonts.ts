@@ -1,8 +1,5 @@
 export const fontFamily = {
-  lobster: ['Lobster', 'sans-serif'],
-  montserrat: ['Montserrat', 'sans-serif'],
-  montserratAlt: ['MontserratAlt', 'sans-serif'],
-  next: ['AvenirNext', 'sans-serif'],
+  gotham: ['Gotham', 'sans-serif'],
 };
 
 export const fontSize = {

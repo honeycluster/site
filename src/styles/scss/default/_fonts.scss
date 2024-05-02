@@ -1,35 +1,10 @@
 @font-face {
-  font-family: 'AvenirNext';
-  src: url('../../../components/general/assets/fonts/AvenirNext/AvenirNextLTPro-Regular.otf');
-}
-
-@font-face {
-  font-family: 'AvenirNextDemi';
-  src: url('../../../components/general/assets/fonts/AvenirNext/AvenirNextLTPro-DemiCn.otf');
-}
-
-@font-face {
-  font-family: 'AvenirNextBold';
-  src: url('../../../components/general/assets/fonts/AvenirNext/AvenirNextLTPro-Bold.otf');
-}
-
-@font-face {
-  font-family: 'AvenirNextReg';
-  src: url('../../../components/general/assets/fonts/AvenirNext/AvenirNextLTPro-It.otf');
-}
-
-@font-face {
-  font-family: 'Montserrat';
+  font-family: 'Gotham';
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
   font-named-instance: 'Regular';
-  src: url('../../../components/general/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'MontserratAlt';
-  src: url('../../../components/general/assets/fonts/MontserratAlt/MontserratAlternates-Regular.ttf');
+  src: url('../../../components/general/assets/fonts/Gotham/GothamMedium.ttf');
 }
 
 @layer utilities {

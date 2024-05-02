@@ -1,5 +1,7 @@
 import { type Config } from 'tailwindcss';
-import { fontFamily } from './src/styles/themes/fonts';
+import { animation } from './src/styles/themes/animation';
+import { colors, backgroundImage, gradientColorStops } from './src/styles/themes/colors';
+import { fontFamily, fontSize } from './src/styles/themes/fonts';
 
 export default {
   mode: 'jit',
@@ -35,13 +37,17 @@ export default {
       spacing: {
         1: '0.35em',
       },
-      fontFamily,
       boxShadowColor: {
         sh1: 'var(--s)',
       },
       boxShadow: {
         sq: '0px 0px 20px 20px var(--s1), 25px 0px 20px -20px var(--s1), 0px 25px 20px -20px var(--s1), -25px 0px 20px -20px var(--s1)',
       },
+      fontFamily,
+      animation,
+      gradientColorStops,
+      backgroundImage,
+      colors,
     },
   },
   plugins: [

@@ -12,13 +12,13 @@ interface Props {
 const Dash = ({ children }: Props) => {
   return (
     <Theme>
-      <div className="tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center tw-bg-gradient3 tw-font-montserrat tw-text-t1 tw-bg-white">
-        <div className="dark tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center tw-bg-gradient3 tw-font-montserrat">
+      <div className="theme2 tw-bg-gradient3 tw-font-gotham tw-text-t1 tw-bg-b2 tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center">
+        <div className="tw-bg-gradient3 tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center">
           <div className="tw-flex tw-w-full tw-grow tw-overflow-hidden">
             <div className="tw-flex tw-grow tw-flex-col">
               <Header />
-              <div className="tw-z-10 tw-w-full tw-grow tw-overflow-y-auto tw-items-center tw-flex tw-flex-col">
-                <div className="tw-relative tw-w-full tw-flex tw-max-w-[1300px] tw-flex-col tw-h-fit tw-items-center tw-border-r tw-border-l tw-border-[#4AA4FF]">
+              <div className="tw-z-10 tw-flex tw-w-full tw-grow tw-flex-col tw-items-center tw-overflow-y-auto">
+                <div className="tw-border-br1 tw-relative tw-flex tw-h-fit tw-w-full tw-max-w-[1300px] tw-flex-col tw-items-center tw-border-l tw-border-r">
                   {children}
                   <Footer />
                 </div>

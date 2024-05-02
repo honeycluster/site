@@ -1,3 +1,3 @@
-# Developer Dashboard
+# Honeycluster Landing Page
 
-This is a place where developers can go to modify their dapps within Crossmark.
+A friendly landing page for all bee-kind
