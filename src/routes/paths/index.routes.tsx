@@ -3,7 +3,7 @@ import { Route, Link, NotFoundRoute, Outlet, useNavigate } from '@tanstack/react
 
 import { Dash } from '@/components/general/template';
 import Landing from '@/screens/account/home';
-import Bridge from '@/screens/account/forms';
+import Join from '@/screens/account/join';
 
 export const _rootRoute = new Route({
   getParentRoute: () => rootRoute,
@@ -35,9 +35,9 @@ export const indexRoute = new Route({
   },
 });
 
-export const bridgeRoute = new Route({
-  path: `bridge`,
-  component: Bridge,
+export const joinRoute = new Route({
+  path: `join`,
+  component: Join,
   loader: async () => {
     /*  await queryClient.ensureQueryData(getRandomBeerQueryOptions()); */
   },

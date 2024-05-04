@@ -21,24 +21,17 @@ const Header = (props: Props) => {
   const nav = useNavigate();
 
   return (
-    <div className="tw-bg-b1 tw-fixed tw-z-20 tw-flex tw-h-[70px] tw-w-full tw-select-none tw-items-center tw-justify-center tw-border-b tw-border-white tw-py-4">
+    <div className="tw-fixed tw-z-20 tw-flex tw-h-[70px] tw-w-full tw-select-none tw-items-center tw-justify-center tw-py-4">
       <div className="tw-flex tw-w-full tw-max-w-[1300px] tw-items-center tw-justify-center tw-gap-6 tw-px-6">
         <div className="tw-flex tw-w-fit tw-items-center tw-justify-center tw-gap-3">
-          <Logo className="tw-aspect-square tw-w-10 tw-fill-white max-md:tw-hidden" />
-          <Title className="tw-aspect-auto tw-h-5 tw-w-fit tw-fill-white tw-object-cover" />
+          <Logo className="tw-aspect-square tw-w-10 tw-fill-t1 max-md:tw-hidden" />
+          <Title className="tw-aspect-auto tw-h-5 tw-w-fit tw-fill-t1 tw-object-cover" />
         </div>
         <div className="tw-relative tw-flex tw-h-full tw-grow tw-overflow-hidden" />
 
         <button
-          className="tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-2 tw-whitespace-nowrap tw-rounded-md tw-stroke-white tw-p-3 tw-px-4 tw-text-xs tw-uppercase tw-leading-tight tw-tracking-widest tw-text-white hover:tw-cursor-pointer hover:tw-bg-[#1D8DFF]  max-md:tw-hidden"
-          onClick={() => nav({ to: '/bridge' })}>
-          <Icons.Route className="tw-aspect-square tw-h-4 tw-stroke-2 hover:tw-cursor-pointer" />
-          Bridge
-        </button>
-
-        <button
-          className="tw-border-br1 tw-bg-t1 tw-stroke-t2 tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-4 tw-overflow-hidden tw-whitespace-nowrap tw-rounded-lg tw-border tw-bg-white tw-p-3 tw-px-4 tw-text-xs tw-font-semibold tw-uppercase tw-leading-tight tw-tracking-widest tw-text-[#4AA4FF] hover:tw-cursor-pointer hover:tw-bg-[#FFF846]  max-md:tw-hidden"
-          onClick={() => window.open('https://docs.crossmark.io', 'blank')}>
+          className="tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-4 tw-overflow-hidden tw-whitespace-nowrap tw-rounded-full tw-bg-t1 tw-stroke-t2 tw-p-2 tw-px-4 tw-text-sm tw-font-medium tw-tracking-wider tw-text-b1 hover:tw-cursor-pointer hover:tw-bg-b2 hover:tw-text-t1 max-md:tw-hidden"
+          onClick={() => nav({ to: '/join' })}>
           Join the Hive!
         </button>
         <Hamburger />

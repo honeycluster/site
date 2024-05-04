@@ -6,6 +6,21 @@ const nextConfig = {
       use: ['@svgr/webpack'],
     });
 
+    const prefix = config.assetPrefix ?? config.basePath ?? '';
+    config.module.rules.push({
+      test: [/\.mp4$/, /\.webm$/],
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            publicPath: `${prefix}/_next/static/media/`,
+            outputPath: `${config.isServer ? '../' : ''}static/media/`,
+            name: '[name].[hash].[ext]',
+          },
+        },
+      ],
+    });
+
     config.resolve.fallback = {
       fs: false,
       net: false,

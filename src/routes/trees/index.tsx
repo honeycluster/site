@@ -4,7 +4,7 @@ import * as IndexRoutes from '../paths/index.routes';
 
 const RootRoutes = IndexRoutes._rootRoute.addChildren([
   IndexRoutes.indexRoute,
-  IndexRoutes.bridgeRoute,
+  IndexRoutes.joinRoute,
 ]);
 
 export default rootRoute.addChildren([RootRoutes]);
