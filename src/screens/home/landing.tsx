@@ -24,7 +24,7 @@ export const Landing = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-bg-gradient-to-r tw-from-b1 tw-via-[#000000dc] tw-to-transparent tw-object-cover max-md:tw-w-[150%]"></div>
+      <div className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-bg-gradient-to-r tw-from-b1 tw-via-[#000000dc] tw-to-transparent tw-object-cover max-md:tw-w-[120%]"></div>
 
       <div className="tw-relative tw-flex tw-h-full tw-w-full tw-flex-col tw-items-start tw-justify-start tw-gap-6 tw-px-8 tw-pt-[70px] max-md:tw-items-center max-md:tw-px-1">
         <div className="tw-flex tw-h-full tw-flex-col tw-items-start tw-justify-center tw-gap-10">
