@@ -2,8 +2,8 @@ import rootRoute from '../root';
 import { Route, Link, NotFoundRoute, Outlet, useNavigate } from '@tanstack/react-router';
 
 import { Dash } from '@/components/general/template';
-import Landing from '@/screens/account/home';
-import Join from '@/screens/account/join';
+
+import * as Screens from '@/screens';
 
 export const _rootRoute = new Route({
   getParentRoute: () => rootRoute,
@@ -17,7 +17,7 @@ export const _rootRoute = new Route({
 
 export const indexRoute = new Route({
   path: `/`,
-  component: Landing,
+  component: Screens.Home,
   loader: async () => {
     /*  await queryClient.ensureQueryData(getRandomBeerQueryOptions()); */
   },
@@ -25,19 +25,13 @@ export const indexRoute = new Route({
   pendingComponent: () => {
     return <span>Loading Random Details</span>;
   },
-  errorComponent: (error) => {
-    return (
-      <div>
-        Loading Random Error
-        <pre>{JSON.stringify(error, null, 2)}</pre>
-      </div>
-    );
-  },
+  errorComponent: (error) => 
+    <Screens.Error error={JSON.stringify(error, null, 2)} />,
 });
 
 export const joinRoute = new Route({
   path: `join`,
-  component: Join,
+  component: Screens.Working,
   loader: async () => {
     /*  await queryClient.ensureQueryData(getRandomBeerQueryOptions()); */
   },
@@ -45,12 +39,34 @@ export const joinRoute = new Route({
   pendingComponent: () => {
     return <span>Loading Random Details</span>;
   },
-  errorComponent: (error) => {
-    return (
-      <div>
-        Loading Random Error
-        <pre>{JSON.stringify(error, null, 2)}</pre>
-      </div>
-    );
+  errorComponent: (error) => 
+    <Screens.Error error={JSON.stringify(error, null, 2)} />,
+});
+
+export const learnRoute = new Route({
+  path: `learn`,
+  component: Screens.Working,
+  loader: async () => {
+    /*  await queryClient.ensureQueryData(getRandomBeerQueryOptions()); */
   },
+  getParentRoute: () => _rootRoute,
+  pendingComponent: () => {
+    return <span>Loading Random Details</span>;
+  },
+  errorComponent: (error) => 
+    <Screens.Error error={JSON.stringify(error, null, 2)} />,
+});
+
+export const startRoute = new Route({
+  path: `gettingStarted`,
+  component: Screens.Working,
+  loader: async () => {
+    /*  await queryClient.ensureQueryData(getRandomBeerQueryOptions()); */
+  },
+  getParentRoute: () => _rootRoute,
+  pendingComponent: () => {
+    return <span>Loading Random Details</span>;
+  },
+  errorComponent: (error) => 
+    <Screens.Error error={JSON.stringify(error, null, 2)} />,
 });

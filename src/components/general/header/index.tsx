@@ -21,9 +21,9 @@ const Header = (props: Props) => {
   const nav = useNavigate();
 
   return (
-    <div className="tw-fixed tw-z-20 tw-flex tw-h-[70px] tw-w-full tw-select-none tw-items-center tw-justify-center tw-py-4">
+    <div className={`tw-fixed tw-z-20 tw-flex tw-h-[70px] tw-w-full tw-select-none tw-items-center tw-justify-center tw-py-4 ${isOpen && 'tw-bg-b1 tw-border-b tw-border-br1'}`}>
       <div className="tw-flex tw-w-full tw-max-w-[1300px] tw-items-center tw-justify-center tw-gap-6 tw-px-6">
-        <div className="tw-flex tw-w-fit tw-items-center tw-justify-center tw-gap-3">
+        <div className="tw-flex tw-w-fit tw-items-center tw-justify-center tw-gap-3" onClick={() => nav({ to: '/' })}>
           <Logo className="tw-aspect-square tw-w-10 tw-fill-t1 max-md:tw-hidden" />
           <Title className="tw-aspect-auto tw-h-5 tw-w-fit tw-fill-t1 tw-object-cover" />
         </div>

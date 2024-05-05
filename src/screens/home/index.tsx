@@ -4,12 +4,10 @@ import { Landing } from './landing';
 
 import Meta from '@meta/index';
 
-const Index = () => {
+export const Index = () => {
   return (
     <>
       <Landing />
     </>
   );
 };
-
-export default Index;
