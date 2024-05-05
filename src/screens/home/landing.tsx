@@ -11,7 +11,7 @@ export const Landing = () => {
   const nav = useNavigate();
 
   return (
-    <div className="h-screen tw-relative tw-max-h-[1000px] tw-w-full tw-max-w-[1300px] tw-flex-shrink-0 tw-overflow-hidden tw-px-12 tw-pb-12 max-md:tw-px-1">
+    <div className="h-screen tw-relative tw-flex tw-max-h-[1000px] tw-w-full tw-max-w-[1300px] tw-flex-shrink-0 tw-flex-col tw-overflow-hidden">
       <Image
         priority
         src={HoneycombStill}
@@ -28,9 +28,9 @@ export const Landing = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-bg-gradient-to-r tw-from-b1 tw-via-[#000000dc] tw-to-transparent tw-object-cover max-md:tw-w-[150%] max-md:tw-from-[#000000f2]"></div>
+      <div className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-bg-gradient-to-r tw-from-b1 tw-via-[#000000dc] tw-to-transparent tw-object-cover max-md:tw-w-[150%] max-md:tw-from-[#000000fd]"></div>
 
-      <div className="tw-relative tw-flex tw-h-full tw-w-full tw-flex-col tw-items-start tw-justify-start tw-gap-6 tw-px-8 tw-pt-[70px] max-md:tw-items-center max-md:tw-px-1">
+      <div className="tw-relative tw-flex tw-w-full tw-grow tw-flex-col tw-items-start tw-justify-start tw-gap-6 tw-px-24 tw-pb-12 tw-pt-[70px] max-md:tw-items-center max-md:tw-px-3">
         <div className="tw-flex tw-h-full tw-flex-col tw-items-start tw-justify-center tw-gap-10">
           <div className="tw-flex tw-h-fit tw-flex-col tw-gap-10 tw-text-3xl tw-font-semibold tw-text-t1 tw-drop-shadow max-sm:tw-text-base">
             <div className="tw-flex tw-flex-col tw-text-3xl max-md:tw-items-center">
@@ -61,7 +61,7 @@ export const Landing = () => {
         </div>
       </div>
 
-      <div className="tw-absolute tw-bottom-0 tw-left-0 tw-flex tw-h-fit tw-min-h-[70px] tw-w-full tw-items-center tw-items-center tw-justify-center tw-justify-center tw-gap-3 tw-bg-b2 tw-px-4 max-md:tw-flex-col max-md:tw-p-3">
+      <div className="tw-relative tw-flex tw-h-fit tw-min-h-[70px] tw-w-full tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-3 tw-bg-b2 tw-px-4 max-md:tw-flex-col max-md:tw-p-3">
         {/*         <Icons.ChevronDownDouble className="tw-h-3/4 tw-w-fit tw-stroke-b1 tw-stroke-1 tw-flex-shrink-0" /> */}
         <div className="tw-flex tw-grow tw-flex-col tw-overflow-hidden tw-text-b1">
           <div className="tw-text-md tw-font-bold max-md:tw-text-center">
