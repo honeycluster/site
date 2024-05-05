@@ -7,7 +7,7 @@ interface Props {
 const Theme = ({ children }: Props) => {
   return (
     <div
-      className={`${'theme2'} tw-transition-colors tw-duration-500 tw-h-screen tw-w-screen`}>
+      className={`${'theme2'} tw-transition-colors tw-duration-500 h-screen tw-w-screen`}>
       {children}
     </div>
   );
