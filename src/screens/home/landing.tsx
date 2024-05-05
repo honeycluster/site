@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import HoneycombVideo from 'src/components/general/assets/video/webm/honeycomb-video-trimmed.webm';
-import HoneycombStill from 'src/components/general/assets/images/png/honeycomb-still-2k.png';
+import HoneycombStill from 'src/components/general/assets/images/png/honeycomb-still.png';
 
 import Icons from '@icons/index';
 import { useNavigate } from '@tanstack/react-router';
@@ -12,11 +12,14 @@ export const Landing = () => {
 
   return (
     <div className="tw-relative h-screen tw-max-h-[1000px] tw-w-full tw-max-w-[1300px] tw-flex-shrink-0 tw-overflow-hidden tw-px-12 tw-pb-12 max-md:tw-px-1">
+      <Image priority src={HoneycombStill} alt='' className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-object-cover max-md:tw-w-[175%]"/>
+      
       <video
         autoPlay
         loop
         muted
-        className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-object-cover max-md:tw-w-[175%]">
+        className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-object-cover max-md:tw-w-[175%]"
+        >
         <source src={HoneycombVideo} type="video/webm" />
         Your browser does not support the video tag.
       </video>
