@@ -40,12 +40,12 @@ export const Landing = () => {
           </div>
           <div className="tw-flex tw-gap-4 tw-text-base tw-font-normal max-md:tw-justify-center tw-w-full">
             <button
-              className="tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-4 tw-overflow-hidden tw-whitespace-nowrap tw-rounded-full tw-border tw-border-br1 tw-bg-t1 tw-stroke-t2 tw-p-1 tw-px-6 tw-tracking-widest tw-text-b1 hover:tw-cursor-pointer hover:tw-bg-b2 hover:tw-text-t1 max-sm:tw-px-3 max-sm:tw-text-sm"
+              className="tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-4 tw-overflow-hidden tw-whitespace-nowrap tw-rounded-full tw-border tw-border-br1 tw-bg-t1 tw-stroke-t2 tw-p-1 tw-px-6 tw-tracking-widest tw-text-b1 hover:tw-cursor-pointer hover:tw-bg-b2 hover:tw-text-t1 max-sm:tw-px-4 max-sm:tw-py-2 max-sm:tw-text-xs"
               onClick={() => nav({ to: '/learn' })}>
               Learn More
             </button>
             <button
-              className="tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-4 tw-overflow-hidden tw-whitespace-nowrap tw-rounded-full tw-border tw-border-br1 tw-bg-t1 tw-stroke-t2 tw-p-1 tw-px-6 tw-tracking-widest tw-text-b1 hover:tw-cursor-pointer hover:tw-bg-b2 hover:tw-text-t1 max-sm:tw-px-3 max-sm:tw-text-sm"
+              className="tw-flex tw-h-full tw-w-fit tw-flex-shrink-0 tw-items-center tw-justify-center tw-gap-4 tw-overflow-hidden tw-whitespace-nowrap tw-rounded-full tw-border tw-border-br1 tw-bg-t1 tw-stroke-t2 tw-p-1 tw-px-6 tw-tracking-widest tw-text-b1 hover:tw-cursor-pointer hover:tw-bg-b2 hover:tw-text-t1 max-sm:tw-px-4 max-sm:tw-py-2 max-sm:tw-text-xs"
               onClick={() => nav({ to: '/gettingStarted' })}>
               Start Building
             </button>
@@ -53,13 +53,13 @@ export const Landing = () => {
         </div>
       </div>
 
-      <div className="tw-absolute tw-bottom-0 tw-left-0 tw-flex tw-h-[70px] tw-w-full tw-items-center tw-justify-center tw-bg-b2 tw-px-4 tw-gap-3">
+      <div className="tw-absolute tw-bottom-0 tw-left-0 tw-flex tw-min-h-[70px] tw-h-fit tw-w-full tw-items-center tw-justify-center tw-bg-b2 tw-px-4 tw-gap-3 max-md:tw-flex-col max-md:tw-p-3 tw-justify-center tw-items-center">
 {/*         <Icons.ChevronDownDouble className="tw-h-3/4 tw-w-fit tw-stroke-b1 tw-stroke-1 tw-flex-shrink-0" /> */}
         <div className="tw-flex tw-grow tw-flex-col tw-text-b1 tw-overflow-hidden">
-          <div className="tw-text-md tw-font-bold tw-truncate">
+          <div className="tw-text-md tw-font-bold max-md:tw-text-center">
             Enterprise infrastructure and data provider for blockchain
           </div>
-          <div className="tw-text-sm tw-font-light tw-truncate">Node clusters, data backups, api endpoints</div>
+          <div className="tw-text-sm tw-font-light max-md:tw-text-center">Node clusters, data backups, api endpoints</div>
         </div>
         <div className="tw-flex tw-items-center tw-justify-center tw-gap-2 tw-rounded-full tw-bg-b1 tw-p-1 tw-px-4">
           <div className="tw-text-center tw-align-bottom tw-text-xs tw-font-medium">
