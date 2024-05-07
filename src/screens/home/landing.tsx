@@ -114,9 +114,9 @@ export const Landing = () => {
               <div className="tw-font-light tw-capitalize tw-leading-none max-sm:tw-text-2xl">
                 the
               </div>
-              <div className="tw-flex tw-min-h-[128px] tw-w-full max-md:tw-min-h-[96px] max-md:tw-items-center max-md:tw-justify-center max-sm:tw-min-h-[96px]">
+              <div className="tw-flex tw-min-h-[128px] tw-w-full max-md:tw-min-h-[96px] max-md:tw-items-center max-md:tw-justify-center max-sm:tw-min-h-[72px]">
                 <div
-                  className={`${word && 'tw-mr-[3px]'} max-sm:tw-text-8xl" tw-text-9xl tw-font-bold tw-capitalize tw-leading-none tw-text-b2 max-md:tw-text-center max-md:tw-text-8xl`}>
+                  className={`${word && 'tw-mr-[3px]'} tw-text-9xl tw-font-bold tw-capitalize tw-leading-none tw-text-b2 max-md:tw-text-center max-md:tw-text-8xl max-sm:tw-text-7xl`}>
                   {word}
                 </div>
                 {blinker && <Flicker className="tw-h-full tw-border-l tw-border-b2"></Flicker>}
