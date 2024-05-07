@@ -1,12 +1,12 @@
 import React from 'react';
+import Meta from '@meta/index';
 
 import { Landing } from './landing';
-
-import Meta from '@meta/index';
 
 export const Index = () => {
   return (
     <>
+      <Meta />
       <Landing />
     </>
   );

@@ -1,47 +1,130 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-import HoneycombVideo from 'src/components/general/assets/video/webm/honeycomb-video-trimmed.webm';
+//import HoneycombVideo from 'src/components/general/assets/video/webm/honeycomb-video-trimmed.webm';
+import HoneycombVideo from 'src/components/general/assets/video/webm/honeycluster-comp-trimmed-720.webm';
 import HoneycombStill from 'src/components/general/assets/images/png/honeycomb-still.png';
 
-import Icons from '@icons/index';
 import { useNavigate } from '@tanstack/react-router';
+import { sleep } from '@/lib/helpers/sleep';
+
+import Flicker from '@components/general/animation/flicker';
+
+const words = [
+  'hive',
+  'cluster',
+  'infra',
+  'nodes',
+  'swarm',
+  'bees',
+  'provider',
+  'zzzzzz',
+  'honey',
+  'data',
+  'api',
+];
+
+const letterPause = 300;
+const wordPause = 3000;
 
 export const Landing = () => {
   const nav = useNavigate();
 
+  const [init, setInit] = useState(false);
+
+  const [wordIndex, setWordIndex] = useState(0);
+  const [word, setWord] = useState(words[wordIndex]);
+  const [blinker, setBlinker] = useState(false);
+
+  const shorten = async () => {
+    let currentWord = words[wordIndex];
+    let length = currentWord?.length;
+
+    await sleep(wordPause);
+
+    setBlinker(true);
+    let trim = length;
+
+    // shorten word
+    while (true) {
+      setWord((prev) => prev?.slice(0, trim));
+
+      await sleep(letterPause);
+      if (trim == 0) break;
+      if (trim && trim > 0) --trim;
+    }
+
+    return setWordIndex((prev) => {
+      if (words.length - 1 === wordIndex) return 0;
+      return ++prev;
+    });
+  };
+
+  const elongate = async () => {
+    await sleep(letterPause * 3);
+
+    let currentWord = words[wordIndex];
+    let length = currentWord?.length;
+    let trim = 1;
+
+    // elongate new word
+    while (true) {
+      setWord(currentWord?.slice(0, trim));
+
+      await sleep(letterPause);
+      if (trim == length) break;
+      if (trim && trim > 0) ++trim;
+    }
+
+    return shorten();
+  };
+
+  useEffect(() => {
+    if (!init) {
+      setInit(true);
+      shorten();
+    }
+    if (init) elongate();
+  }, [wordIndex]);
+
   return (
-    <div className="h-screen tw-relative tw-flex tw-max-h-[1000px] tw-w-full tw-max-w-[1300px] tw-flex-shrink-0 tw-flex-col tw-overflow-hidden">
+    <div className="h-screen tw-relative tw-flex tw-max-h-[1000px] tw-w-full tw-flex-shrink-0 tw-flex-col tw-overflow-hidden">
       <Image
         priority
         src={HoneycombStill}
         alt=""
-        className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-object-cover max-md:tw-w-[175%]"
+        className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-object-cover max-md:tw-w-[175%]"
       />
 
       <video
         autoPlay
         loop
         muted
-        className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-object-cover max-md:tw-w-[175%]">
+        className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-object-cover max-md:tw-w-[175%]">
         <source src={HoneycombVideo} type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-max-w-[1300px] tw-bg-gradient-to-r tw-from-b1 tw-via-[#000000dc] tw-to-transparent tw-object-cover max-md:tw-w-[150%] max-md:tw-from-[#000000fd] max-md:tw-via-[#000000c8]"></div>
+      <div className="tw-absolute tw-left-0 tw-top-0 tw-z-0 tw-h-full tw-w-full tw-bg-gradient-to-r tw-from-b1 tw-via-[#000000dc] tw-to-transparent tw-object-cover max-md:tw-w-[150%] max-md:tw-from-[#000000fd] max-md:tw-via-[#000000c8]"></div>
 
       <div className="tw-relative tw-flex tw-w-full tw-grow tw-flex-col tw-items-start tw-justify-start tw-gap-6 tw-px-24 tw-pb-12 tw-pt-[70px] max-md:tw-items-center max-md:tw-px-3">
         <div className="tw-flex tw-h-full tw-flex-col tw-items-start tw-justify-center tw-gap-10">
-          <div className="tw-flex tw-h-fit tw-flex-col tw-gap-10 tw-text-3xl tw-font-semibold tw-text-t1 tw-drop-shadow max-sm:tw-text-base">
+          <div className="tw-flex tw-h-fit tw-w-full tw-flex-col tw-gap-10 tw-text-3xl tw-font-semibold tw-text-t1 tw-drop-shadow max-sm:tw-text-base">
             <div className="tw-flex tw-flex-col tw-text-3xl max-md:tw-items-center">
-              <div className="tw-font-light tw-capitalize max-sm:tw-text-2xl">the</div>
-              <div className="tw-text-8xl tw-font-bold tw-capitalize tw-text-b2 max-md:tw-text-7xl max-sm:tw-text-6xl">
-                hive
+              <div className="tw-font-light tw-capitalize tw-leading-none max-sm:tw-text-2xl">
+                the
+              </div>
+              <div className="tw-flex tw-min-h-[128px] tw-w-full max-md:tw-min-h-[96px] max-md:tw-items-center max-md:tw-justify-center max-sm:tw-min-h-[96px]">
+                <div
+                  className={`${word && 'tw-mr-[3px]'} max-sm:tw-text-8xl" tw-text-9xl tw-font-bold tw-capitalize tw-leading-none tw-text-b2 max-md:tw-text-center max-md:tw-text-8xl`}>
+                  {word}
+                </div>
+                {blinker && <Flicker className="tw-h-full tw-border-l tw-border-b2"></Flicker>}
               </div>
             </div>
             <div className="tw-flex tw-flex-col tw-text-3xl max-md:tw-items-center">
-              <div className="tw-font-light max-sm:tw-text-2xl">of the</div>
-              <div className="tw-text-center tw-text-8xl tw-font-bold tw-capitalize tw-text-b2 max-md:tw-items-center max-md:tw-text-7xl max-sm:tw-text-6xl">
+              <div className="tw-font-light tw-leading-none max-sm:tw-text-2xl">of the</div>
+              <div className="tw-text-6xl tw-font-bold tw-capitalize tw-leading-none tw-text-b2 max-md:tw-items-center max-md:tw-text-center max-md:tw-text-5xl max-sm:tw-text-4xl">
                 XRP ledger
               </div>
             </div>
