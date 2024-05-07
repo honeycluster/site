@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-const SITE_ROOT = 'https://' + (process.env.VERCEL_URL || 'site.honcluster.dev');
+const SITE_ROOT = 'https://' + (process.env.VERCEL_URL || 'honeycluster.io');
 
 const Meta = () => {
   return (

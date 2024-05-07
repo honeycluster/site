@@ -13,6 +13,7 @@ import Nav from './nav';
 import Hamburger from './menu';
 
 interface Props {
+  opacity: boolean;
   setIsError?: Dispatch<SetStateAction<boolean>>;
 }
 
@@ -22,7 +23,7 @@ const Header = (props: Props) => {
 
   return (
     <div
-      className={`tw-fixed tw-z-20 tw-flex tw-h-[70px] tw-w-full tw-select-none tw-items-center tw-justify-center tw-py-4 ${isOpen && 'tw-border-b tw-border-br1 tw-bg-b1'}`}>
+      className={`tw-fixed tw-z-20 tw-flex tw-h-[70px] tw-w-full tw-select-none tw-items-center tw-justify-center tw-py-4 tw-transition-all ${isOpen && 'tw-border-b tw-border-br1 tw-bg-b1'} ${props.opacity && 'tw-bg-[#0000007a]'}`}>
       <div className="tw-flex tw-w-full tw-max-w-[2000px] tw-items-center tw-justify-center tw-gap-6 tw-px-6">
         <div
           className="tw-flex tw-w-fit tw-items-center tw-justify-center tw-gap-3"
